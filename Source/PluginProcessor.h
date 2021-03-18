@@ -1,18 +1,7 @@
-/*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin processor.
-
-  ==============================================================================
-*/
-
 #pragma once
 
 #include <JuceHeader.h>
 
-//==============================================================================
-/**
-*/
 class RectifyAudioProcessor  : public juce::AudioProcessor
 {
 public:
@@ -57,8 +46,6 @@ private:
     AudioParameterFloat* mMixParameter;
     AudioParameterFloat* mThresholdParameter;
     
-//    float thresh = 0.f;
-//    float mix = 0.f;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (RectifyAudioProcessor)
 };

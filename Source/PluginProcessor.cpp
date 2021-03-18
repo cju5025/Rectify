@@ -1,11 +1,3 @@
-/*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin processor.
-
-  ==============================================================================
-*/
-
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
@@ -23,7 +15,7 @@ RectifyAudioProcessor::RectifyAudioProcessor()
 #endif
 {
     addParameter(mMixParameter = new AudioParameterFloat("mix", "Mix", 0.f, 1.f, 0.3f));
-    addParameter(mThresholdParameter = new AudioParameterFloat("threshold", "Threshold", 0.f, 0.3f, 0.f));
+    addParameter(mThresholdParameter = new AudioParameterFloat("threshold", "Threshold", 0.f, 0.25f, 0.f));
 }
 
 RectifyAudioProcessor::~RectifyAudioProcessor()

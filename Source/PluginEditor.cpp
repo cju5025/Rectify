@@ -1,11 +1,3 @@
-/*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin editor.
-
-  ==============================================================================
-*/
-
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
@@ -51,14 +43,11 @@ RectifyAudioProcessorEditor::~RectifyAudioProcessorEditor()
 //==============================================================================
 void RectifyAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-
     g.setColour (juce::Colours::white);
     
     g.drawText("Mix", ((getWidth() / 7) * 1) - (30), (getHeight() / 2) - 15, 100, 100, Justification::centred, false);
     g.drawText("Rectify", ((getWidth() / 5) * 2) + (15), (getHeight() / 2) - 15, 100, 100, Justification::centred, false);
-
 }
 
 void RectifyAudioProcessorEditor::resized()
